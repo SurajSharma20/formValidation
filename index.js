@@ -6,8 +6,9 @@ const route =require('./router')
 const Router = require("./router")
 app.use(express.urlencoded({extended:true}))
 app.use(Router)
+const PORT = process.env .PORT || 5000
 
 // Call the server
-app.listen(3000, (req , res) =>{
+app.listen(PORT, (req , res) =>{
     console.log('perfect')
 })
