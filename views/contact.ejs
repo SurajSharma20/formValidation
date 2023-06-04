@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("../partial/meta.ejs")%>
+  
+</head>
+<style>
+    .main_container{
+      background-color:rgba(135, 206, 250, 0.471) ;  
+    border: 1px solid green;
+    height: 480px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    left: 37%;
+    top: 9%;
+    border-radius: 20px;
+    box-shadow: 1px 0px 6px 8px;
+   
+    }
+
+    .input_text{
+      justify-content: center;
+      display: flex;
+      margin: 40px;
+      font-size: 20px;
+      border-radius: 20px;
+      text-align: center;
+      border: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      height: 35px;
+      
+  }
+  
+  .submit{
+    align-items: center;
+      color: blue;
+      cursor: pointer;
+      margin-left: 28%;
+      width: 130px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .heading{
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid green;
+        border-bottom: 1px solid green;
+        border-radius: 70%;
+        color: lightseagreen;
+        
+    }   
+    .message{
+       
+        height: 100px;
+    }
+</style>
+<body>
+    <%-include("../partial/navbar.ejs")%>
+    <form action="/contact" class="main_container" method="post">
+        <div class="input_container">
+            <h1 class="heading">contact us </h1>
+            <input type="text" placeholder="Name" class="input_text" name="name" >
+            <input type="text"  placeholder="Email-Id" class="input_text" autocomplete="off" name="email" >
+            <textarea class="input_text message" placeholder="messages" name="message"></textarea>
+            <button type="submit" class="input_text submit">submit</button>
+        </div>
+    </form>
+</body>
+</html>
